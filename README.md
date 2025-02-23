@@ -1,75 +1,49 @@
-# Nuxt Minimal Starter
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-## Setup
+## Demo 💻
 
-Make sure to install dependencies:
+https://watchinsights.netlify.app/
 
-```bash
-# npm
+
+## Features 🛠 
+- Display popular movies and their trailers
+- Responsive and user-friendly interface
+
+## Technologies and Packages Used 📦
+- Pinia
+- Nuxt Icon & Images
+- Taiwind CSS
+- Google Fonts
+- nuxt-lazytube
+- nuxt-device
+- Eslint Airbnb
+
+
+##  Environment Variables
+```VITE_MASTER_X_KEY= <backend_api_url>```
+
+
+## Getting Started🚀
+```javascript
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+## 🌟 About the Author
+I am a passionate full-stack developer keen on exploring unique projects and collaborating with dynamic teams. Visit my portfolio: 
+https://portfolio-muhammadosama.netlify.app//
 
-Build the application for production:
 
-```bash
-# npm
-npm run build
+## Have a Question❓
+Feel free to open an issue in the repository or reach out to me on Linkedin: https://www.linkedin.com/in/muhammad-osama-688123162/ 
 
-# pnpm
-pnpm build
+## Leave a star  ⭐
+Leave a github star if you found this repo useful. This helps in increasing the visibility of this repo and others finding it too.
 
-# yarn
-yarn build
+## License
 
-# bun
-bun run build
-```
+This project is licensed under the [MIT License](LICENSE).
 
-Locally preview production build:
 
-```bash
-# npm
-npm run preview
 
-# pnpm
-pnpm preview
 
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
