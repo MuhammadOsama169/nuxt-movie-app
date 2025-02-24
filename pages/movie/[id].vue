@@ -42,12 +42,12 @@ function handleNavigateHome() {
     </button>
 
     <!-- YouTube Video Player -->
-    <div class="w-full mb-8 grid grid-cols-2 items-center">
+    <div class="w-full mb-8 grid xl:grid-cols-2 items-center">
       <LazyYoutube :src="youtubeUrl" class="w-full rounded-lg shadow-lg" />
       <!-- Poster Section -->
-      <div class="flex">
+      <div class="flex mt-4 xl:mt-0">
         <div
-          class="lg:w-1/3 w-full bg-cover bg-center rounded-lg shadow-xl overflow-hidden"
+          class="lg:w-1/2 w-full bg-cover bg-center rounded-lg shadow-xl overflow-hidden"
           :style="{
             backgroundImage: `url(https://image.tmdb.org/t/p/w500/${selectedMovie?.backdrop_path})`,
           }"
