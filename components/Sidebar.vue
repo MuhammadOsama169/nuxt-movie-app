@@ -1,14 +1,18 @@
 <script setup lang="ts">
+import { sidebarItems } from "@/public/data/sidebarItem";
+import { Icon } from "@iconify/vue";
+const router = useRouter();
+
 defineProps<{
   isSidebarOpen: boolean;
 }>();
 
-import { sidebarItems } from "@/public/data/sidebarItem";
-
-import { Icon } from "@iconify/vue";
-
 const topItems = sidebarItems.slice(0, 2);
-const bottomItems = sidebarItems.slice(3);
+const bottomItems = sidebarItems.slice(2);
+
+function handleNavigate(href: string) {
+  router.push(`/${href}`);
+}
 </script>
 
 <template>
@@ -32,10 +36,19 @@ const bottomItems = sidebarItems.slice(3);
           <button
             :key="item.id"
             :to="item.id"
+            @click="handleNavigate(item.href)"
+            :disabled="item.comingSoon"
             class="flex gap-2 items-center p-2 my-2"
           >
             <Icon :icon="item.icon" />
             <span>{{ item.title }}</span>
+            <div v-if="item.comingSoon">
+              <span
+                className="rounded-full text-black text-[6px] bg-yellow-300 p-1"
+              >
+                Coming Soon
+              </span>
+            </div>
           </button>
         </div>
       </section>
@@ -46,10 +59,19 @@ const bottomItems = sidebarItems.slice(3);
           <button
             :key="item.id"
             :to="item.id"
-            class="flex gap-2 items-center p-2 my-2 text-white"
+            @click="handleNavigate(item.href)"
+            :disabled="item.comingSoon"
+            class="flex gap-2 items-center p-2 my-2"
           >
             <Icon :icon="item.icon" />
             <span>{{ item.title }}</span>
+            <div v-if="item.comingSoon">
+              <span
+                className="rounded-full text-black text-[6px] bg-yellow-300 p-1"
+              >
+                Coming Soon
+              </span>
+            </div>
           </button>
         </div>
       </section>

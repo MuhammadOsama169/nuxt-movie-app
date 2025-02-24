@@ -1,10 +1,17 @@
 <script setup lang="ts">
 import { ref, computed } from "vue";
-const isSidebarOpen = ref<boolean>(false);
+import { Icon } from "@iconify/vue";
+import { onClickOutside } from "@vueuse/core";
 
-const handleOpenSidebar = () => {
+const isSidebarOpen = ref<boolean>(false);
+const target = ref<HTMLElement | null>(null);
+
+function handleOpenSidebar() {
   isSidebarOpen.value = !isSidebarOpen.value;
-};
+}
+onClickOutside(target, () => {
+  isSidebarOpen.value = false;
+});
 </script>
 
 <template>
@@ -16,6 +23,16 @@ const handleOpenSidebar = () => {
         isSidebarOpen ? 'opacity-50' : 'opacity-1',
       ]"
     >
+      <!-- for mobile -->
+      <section className="flex xl:hidden w-full px-4 pt-4" ref="target">
+        <button
+          @click="handleOpenSidebar"
+          className="flex justify-start w-full"
+        >
+          <Icon icon="hugeicons:left-to-right-list-dash" class="size-[30px]" />
+        </button>
+      </section>
+      <!-- // -->
       <slot></slot>
     </div>
   </div>

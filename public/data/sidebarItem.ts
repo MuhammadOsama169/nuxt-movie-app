@@ -2,13 +2,6 @@ import { type SidebarItemTypes } from "@/types/SidbarItemTypes";
 
 export const sidebarItems: SidebarItemTypes[] = [
   {
-    id: "movies",
-    title: "Top Movies",
-    icon: "mdi:star-outline",
-    comingSoon: false,
-    href: "/top-movies",
-  },
-  {
     id: "trending_movies",
     title: "Trending Movies",
     icon: "mdi:movie",
