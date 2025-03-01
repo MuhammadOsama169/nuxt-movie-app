@@ -33,7 +33,7 @@ onClickOutside(target, () => {
         </button>
       </section>
       <!-- // -->
-      <slot></slot>
+      <slot />
     </div>
   </div>
 </template>

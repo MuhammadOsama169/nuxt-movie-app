@@ -42,8 +42,10 @@ function handleNavigateHome() {
     </button>
 
     <!-- YouTube Video Player -->
-    <div class="w-full mb-8 grid xl:grid-cols-2 items-center">
-      <LazyYoutube :src="youtubeUrl" class="w-full rounded-lg shadow-lg" />
+    <div class="w-full mb-8 grid items-center">
+      <div class="w-full">
+        <LazyYoutube :src="youtubeUrl" max-width="100%" />
+      </div>
       <!-- Poster Section -->
       <div class="flex mt-4 xl:mt-0">
         <div

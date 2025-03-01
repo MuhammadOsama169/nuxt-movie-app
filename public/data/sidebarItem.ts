@@ -4,9 +4,9 @@ export const sidebarItems: SidebarItemTypes[] = [
   {
     id: "trending_movies",
     title: "Trending Movies",
-    icon: "mdi:movie",
+    icon: "material-symbols:movie-outline-rounded",
     comingSoon: false,
-    href: "/",
+    href: "movie",
   },
   {
     id: "tv_shows",
@@ -14,6 +14,13 @@ export const sidebarItems: SidebarItemTypes[] = [
     icon: "mdi:television",
     comingSoon: true,
     href: "#",
+  },
+  {
+    id: "request",
+    title: "Requests",
+    icon: "material-symbols:add-comment-rounded",
+    comingSoon: false,
+    href: "requests",
   },
   {
     id: "settings",
@@ -24,9 +31,9 @@ export const sidebarItems: SidebarItemTypes[] = [
   },
   {
     id: "help",
-    title: "Help",
-    icon: "mdi:help-circle-outline",
-    comingSoon: true,
-    href: "#",
+    title: "Login/Register",
+    icon: "hugeicons:user-square",
+    comingSoon: false,
+    href: "register",
   },
 ];

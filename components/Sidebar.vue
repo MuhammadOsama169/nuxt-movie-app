@@ -7,12 +7,13 @@ defineProps<{
   isSidebarOpen: boolean;
 }>();
 
-const topItems = sidebarItems.slice(0, 2);
-const bottomItems = sidebarItems.slice(2);
+const topItems = sidebarItems.slice(0, 3);
+const bottomItems = sidebarItems.slice(3);
 
 function handleNavigate(href: string) {
   router.push(`/${href}`);
 }
+console.log(topItems);
 </script>
 
 <template>
@@ -40,7 +41,8 @@ function handleNavigate(href: string) {
             :disabled="item.comingSoon"
             class="flex gap-2 items-center p-2 my-2"
           >
-            <Icon :icon="item.icon" />
+            <Icon :icon="item?.icon" class="w-6 h-6" />
+
             <span>{{ item.title }}</span>
             <div v-if="item.comingSoon">
               <span
